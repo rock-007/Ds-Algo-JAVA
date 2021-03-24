@@ -10,20 +10,20 @@ public class Stack {
 
     // data+DS
 
-    public Integer[] data;
+    public char[] data;
 
 
     //Constructor
 
     public Stack(int a) {
         this.totalSize = a;
-        this.data = new Integer[totalSize];
+        this.data = new char[totalSize];
         this.currentTop = -1;
     }
 
     //push
 
-    public void push(int a) {
+    public void push(char a) {
 
         if (isFull()) {
 
@@ -46,12 +46,14 @@ public class Stack {
     }
 
     //pop
-    public int pop() {
+    public char pop() {
 
         if (isEmpty()) {
 
 
             System.out.println(" there is nothing to pop");
+            return 'c';
+
         } else {
             int tempTop = currentTop;
             currentTop--;
@@ -64,7 +66,7 @@ public class Stack {
 
     //peak
 
-    public int peak(int a) {
+    public char peak(char a) {
 
 
         return data[currentTop];
