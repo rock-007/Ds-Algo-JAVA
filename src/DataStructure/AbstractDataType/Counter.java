@@ -1,27 +1,30 @@
 package DataStructure.AbstractDataType;
 
-public class counter {
+public class Counter {
 
-    String str;
+    private String str = null;
+    private int totalCoutner = 0;
 
-    counter(String str){
- this.str=str;
+    public Counter(String str) {
+        this.str = str;
+
+    }
+
+    public void increment() {
+        totalCoutner++;
+
 
     }
 
-    public increment (){
+    public int getCurrentValue() {
 
-
-
-    }
-    public int getCurrentValue (){
-
-
+        return totalCoutner;
 
     }
-    public String toString (){
 
+    public String toString() {
 
+        return str + ":" + totalCoutner;
 
     }
 
